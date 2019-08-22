@@ -14,10 +14,10 @@
         <Logger name="org.jonleb" level="debug" additivity="false">
             <AppenderRef ref="ConsoleAppender" />
         </Logger>
-        <Logger name="org.springframework" level="error" additivity="false">
+        <Logger name="org.springframework" level="debug" additivity="false">
             <AppenderRef ref="ConsoleAppender" />
         </Logger>
-        <Logger name="org.springframework.test" level="error" additivity="false">
+        <Logger name="org.springframework.test" level="debug" additivity="false">
             <AppenderRef ref="ConsoleAppender" />
         </Logger>
         <Root level="warn">
