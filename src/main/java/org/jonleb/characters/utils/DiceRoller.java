@@ -1,7 +1,10 @@
 package org.jonleb.characters.utils;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.jonleb.characters.constraints.DiceConstraint;
+
 import javax.validation.Valid;
-import javax.validation.constraints.Max;
 
 /**
  * What I learn:
@@ -11,19 +14,28 @@ import javax.validation.constraints.Max;
  *
  */
 
+@Data
+@AllArgsConstructor
 public class DiceRoller {
 
-    public DiceRoller(){}
+    /**
+     * Number of dices to roll
+     */
+    private int number = 1;
 
+    /**
+     * sides of the dices (limited to 2,4,6,8,10,12,20,100)
+     */
+    @Valid
+    @DiceConstraint
+    private int sides = 6;
     /**
      * Roll a set of dices of the same sides
      *
-     * @param number: Number of dices to roll
-     * @param sides: sides of the dices (limited to 2,4,6,8,10,12,20,100)
      * @return result of the roll
      */
-    public int roll(@Max(20) @Valid Integer number, @DiceConstraint @Valid Integer sides){
-        return (int) Math.floor(Math.random() * ((sides * number)-number) + number);
+    public int roll(){
+        return (int) Math.floor(Math.random() * ((this.sides * this.number)-this.number) + this.number);
     }
 
 }

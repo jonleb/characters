@@ -1,4 +1,4 @@
-package org.jonleb.characters.utils;
+package org.jonleb.characters.constraints;
 
 
 import javax.validation.ConstraintValidator;

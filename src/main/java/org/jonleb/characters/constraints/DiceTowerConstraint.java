@@ -1,5 +1,4 @@
-package org.jonleb.characters.utils;
-
+package org.jonleb.characters.constraints;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -8,11 +7,9 @@ import java.lang.annotation.*;
 @Documented
 @Target({ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = DiceValidator.class)
-public @interface DiceConstraint {
-
-    String message() default "You have to choose between dice with 2,4,6,8,10,12,20 or 100 sides";
+@Constraint(validatedBy = DiceTowerValidator.class)
+public @interface DiceTowerConstraint {
+    String message() default "{dicetower.error}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
-
 }
