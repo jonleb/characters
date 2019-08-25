@@ -46,6 +46,7 @@ public class DiceTower {
                 result = rollForSuccess(limitSuccess,args);
                 break;
             case SUCCESS_BY_TYPE:
+                result = rollForSuccessBySide(limitSuccess, args);
                 break;
         }
         return result;
@@ -56,8 +57,9 @@ public class DiceTower {
         int total = 0;
         String key = "";
         DiceRoller diceRoller = null;
+        String [] n;
         for (String arg : args) {
-            String [] n = arg.split("[D|d]");
+            n = arg.split("[D|d]");
             diceRoller = new DiceRoller(Integer.valueOf(n[0]), Integer.valueOf(n[1]));
             total += diceRoller.roll();
             key += arg + " ";
@@ -69,8 +71,9 @@ public class DiceTower {
     private Map rollForTotalBySide(String ... args){
         Map result = new HashMap(args.length);
         DiceRoller diceRoller = null;
+        String [] n;
         for (String arg : args) {
-            String [] n = arg.split("[D|d]");
+            n = arg.split("[D|d]");
             diceRoller = new DiceRoller(Integer.valueOf(n[0]), Integer.valueOf(n[1]));
             result.put(arg,diceRoller.roll());
         }
@@ -82,9 +85,11 @@ public class DiceTower {
         DiceRoller diceRoller = null;
         String key = "";
         int successNumber = 0;
+        String [] n;
+        int loops = 0;
         for(String arg: args){
-            String [] n = arg.split("[D|d]");
-            int loops = Integer.valueOf(n[0]);
+            n =arg.split("[D|d]");
+            loops = Integer.valueOf(n[0]);
             for (int i =0; i < loops; i++){
                 diceRoller = new DiceRoller(1, Integer.valueOf(n[1]));
                 if (diceRoller.roll() >= limitSuccess){
@@ -97,8 +102,28 @@ public class DiceTower {
         return result;
     }
 
-    private int rollForSuccessBySide(){
-        return 0;
+    private Map rollForSuccessBySide(int limitSuccess, String ... args){
+
+        Map result = new HashMap(args.length);
+        DiceRoller diceRoller = null;
+        String key = "";
+        int successNumber = 0;
+        String [] n;
+        int loops = 0;
+        for(String arg: args){
+            n = arg.split("[D|d]");
+            loops = Integer.valueOf(n[0]);
+            for (int i =0; i < loops; i++){
+                diceRoller = new DiceRoller(1, Integer.valueOf(n[1]));
+                if (diceRoller.roll() >= limitSuccess){
+                    successNumber ++;
+                };
+            }
+            result.put(key.trim(),successNumber);
+            successNumber = 0;
+        }
+
+        return result;
     }
 
 
