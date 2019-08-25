@@ -1,4 +1,4 @@
-package org.jonleb.characters.constraints;
+package org.jonleb.characters.constraints.diccetower;
 
 import org.jonleb.characters.services.RollType;
 
