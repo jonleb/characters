@@ -17,6 +17,8 @@ import java.util.Map;
 @Validated
 public class DiceTower {
 
+    private DiceRoller diceRoller = new DiceRoller(1,6);
+
     @RollConstraint(rollTypes = {RollType.TOTAL, RollType.TOTAL_BY_TYPE})
     public Map<String, Integer> roll(
             @Valid RollType rollType,
@@ -57,12 +59,10 @@ public class DiceTower {
         Map result = new HashMap(args.length);
         int total = 0;
         String key = "";
-        DiceRoller diceRoller = null;
         String [] n;
         for (String arg : args) {
             n = arg.split("[D|d]");
-            diceRoller = new DiceRoller(Integer.valueOf(n[0]), Integer.valueOf(n[1]));
-            total += diceRoller.roll();
+            total += this.diceRoller.roll(Integer.valueOf(n[0]), Integer.valueOf(n[1]));
             key += arg + " ";
         }
         result.put(key.trim(),total);
@@ -71,19 +71,16 @@ public class DiceTower {
 
     private Map rollForTotalBySide(String ... args){
         Map result = new HashMap(args.length);
-        DiceRoller diceRoller = null;
         String [] n;
         for (String arg : args) {
             n = arg.split("[D|d]");
-            diceRoller = new DiceRoller(Integer.valueOf(n[0]), Integer.valueOf(n[1]));
-            result.put(arg,diceRoller.roll());
+            result.put(arg,this.diceRoller.roll(Integer.valueOf(n[0]), Integer.valueOf(n[1])));
         }
         return result;
     }
 
     private Map rollForSuccess(int limitSuccess, String ... args){
         Map result = new HashMap(args.length);
-        DiceRoller diceRoller = null;
         String key = "";
         int successNumber = 0;
         String [] n;
@@ -92,8 +89,7 @@ public class DiceTower {
             n =arg.split("[D|d]");
             loops = Integer.valueOf(n[0]);
             for (int i =0; i < loops; i++){
-                diceRoller = new DiceRoller(1, Integer.valueOf(n[1]));
-                if (diceRoller.roll() >= limitSuccess){
+                if ( this.diceRoller.roll(1,Integer.valueOf(n[1])) >= limitSuccess){
                     successNumber ++;
                 };
             }
@@ -104,9 +100,7 @@ public class DiceTower {
     }
 
     private Map rollForSuccessBySide(int limitSuccess, String ... args){
-
         Map result = new HashMap(args.length);
-        DiceRoller diceRoller = null;
         String key = "";
         int successNumber = 0;
         String [] n;
@@ -115,8 +109,7 @@ public class DiceTower {
             n = arg.split("[D|d]");
             loops = Integer.valueOf(n[0]);
             for (int i =0; i < loops; i++){
-                diceRoller = new DiceRoller(1, Integer.valueOf(n[1]));
-                if (diceRoller.roll() >= limitSuccess){
+                if (this.diceRoller.roll(1, Integer.valueOf(n[1])) >= limitSuccess){
                     successNumber ++;
                 };
             }

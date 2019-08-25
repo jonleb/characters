@@ -31,10 +31,14 @@ public class DiceRoller {
     private int sides = 6;
     /**
      * Roll a set of dices of the same sides
-     *
+     * @param args first int is the number of dices and second int is the number of sides
      * @return result of the roll
      */
-    public int roll(){
+    public int roll(int ... args){
+        if (args.length > 0){
+            this.number = args[0];
+            this.sides = args[1];
+        }
         return (int) Math.floor(Math.random() * ((this.sides * this.number)-this.number) + this.number);
     }
 
