@@ -2,7 +2,7 @@ package org.jonleb.characters.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.jonleb.characters.constraints.DiceConstraint;
+import org.jonleb.characters.constraints.dice.DiceConstraint;
 
 import javax.validation.Valid;
 

@@ -1,4 +1,4 @@
-package org.jonleb.characters.constraints;
+package org.jonleb.characters.constraints.diccetower;
 
 import lombok.extern.log4j.Log4j2;
 import org.jonleb.characters.services.RollType;

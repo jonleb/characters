@@ -1,7 +1,7 @@
 package org.jonleb.characters.controller;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.characters.constraints.DiceConstraint;
+import org.jonleb.characters.constraints.dice.DiceConstraint;
 import org.jonleb.characters.services.DiceTower;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
