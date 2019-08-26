@@ -8,6 +8,7 @@ import org.jonleb.characters.services.RollType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@SuppressWarnings("WeakerAccess")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

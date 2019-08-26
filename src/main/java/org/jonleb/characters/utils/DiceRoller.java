@@ -21,14 +21,14 @@ public class DiceRoller {
     /**
      * Number of dices to roll
      */
-    private int number = 1;
+    private int number;
 
     /**
      * sides of the dices (limited to 2,4,6,8,10,12,20,100)
      */
     @Valid
     @DiceConstraint
-    private int sides = 6;
+    private int sides;
     /**
      * Roll a set of dices of the same sides
      * @param args first int is the number of dices and second int is the number of sides

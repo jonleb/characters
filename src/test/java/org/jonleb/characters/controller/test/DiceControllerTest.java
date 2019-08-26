@@ -14,6 +14,7 @@ import org.springframework.web.context.WebApplicationContext;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@SuppressWarnings("WeakerAccess")
 @SpringBootTest(classes = {
         SpringBootCharacterApplication.class,
         WebSecurityConfiguration.class,

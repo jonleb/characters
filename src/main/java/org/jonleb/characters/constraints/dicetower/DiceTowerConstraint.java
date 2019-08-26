@@ -4,6 +4,7 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
+@SuppressWarnings("unchecked")
 @Documented
 @Target({ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)

@@ -2,7 +2,6 @@ package org.jonleb.characters.web.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.jonleb.characters.services.DiceTower;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +17,11 @@ import java.util.Map;
 @Log4j2
 public class DiceController {
 
-    @Autowired
-    DiceTower diceTower;
+    private final DiceTower diceTower;
+
+    public DiceController(DiceTower diceTower) {
+        this.diceTower = diceTower;
+    }
 
 
     @RequestMapping(
@@ -49,6 +51,6 @@ public class DiceController {
                 break;
         }
 
-        return new ResponseEntity<Map>(result, HttpStatus.OK);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

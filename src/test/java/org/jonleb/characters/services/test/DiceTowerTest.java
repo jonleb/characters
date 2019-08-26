@@ -37,14 +37,14 @@ class DiceTowerTest {
 
     @Test
     void roll_total_1_dice_type() {
-        Map result = null;
+        Map result;
         try {
             result = diceTower.roll(RollType.TOTAL_BY_TYPE, "3D6");
             int total = (int) result.get("3D6");
             assertTrue(total >= 3 && total <= 18);
         } catch (Exception e) {
             log.debug(e.getMessage());
-            assertTrue(false);
+            fail();
         }
     }
 
@@ -56,7 +56,7 @@ class DiceTowerTest {
             int total = (int) result.get("3D6 2D10");
             assertTrue(total >= 5 && total <= 38);
         } catch (Exception e) {
-            assertTrue(false);
+            fail();
         }
     }
 
@@ -70,13 +70,13 @@ class DiceTowerTest {
             assertTrue(result.containsKey("3D6") && result.containsKey("2D10"));
             assertTrue(total3D6 >= 3 && total3D6 <= 18 && total2D10 >= 2 && total2D10 <= 20);
         } catch (Exception e) {
-            assertTrue(false);
+            fail();
         }
     }
 
     @Test
     void roll_total_1_dice_type_for_success() {
-        Map result = null;
+        Map result;
         try {
             result = diceTower.rollForSuccess(RollType.SUCCESS, 4, "3D6");
             int total = (int) result.get("3D6");
@@ -84,7 +84,7 @@ class DiceTowerTest {
             assertTrue(total >= 0 && total <= 3);
         } catch (Exception e) {
             log.debug(e.getMessage());
-            assertTrue(false);
+            fail();
         }
     }
 
