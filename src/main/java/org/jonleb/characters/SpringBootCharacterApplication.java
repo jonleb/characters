@@ -11,7 +11,13 @@ import javax.validation.executable.ExecutableValidator;
  * Created by jonathan on 30/10/17.
  */
 
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {
+                "org.jonleb.characters.config",
+                "org.jonleb.characters.web.controller",
+                "org.jonleb.characters.services"
+        }
+)
 @Log4j2
 public class SpringBootCharacterApplication {
     private static ExecutableValidator executableValidator;

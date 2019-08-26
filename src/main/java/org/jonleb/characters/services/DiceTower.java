@@ -1,8 +1,8 @@
 package org.jonleb.characters.services;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.characters.constraints.diccetower.DiceTowerConstraint;
-import org.jonleb.characters.constraints.diccetower.RollConstraint;
+import org.jonleb.characters.constraints.dicetower.DiceTowerConstraint;
+import org.jonleb.characters.constraints.dicetower.RollConstraint;
 import org.jonleb.characters.utils.DiceRoller;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
