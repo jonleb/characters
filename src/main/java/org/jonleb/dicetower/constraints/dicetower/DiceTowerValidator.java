@@ -1,4 +1,4 @@
-package org.jonleb.characters.constraints.diccetower;
+package org.jonleb.dicetower.constraints.dicetower;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class DiceTowerValidator implements ConstraintValidator<DiceTowerConstraint, String[]> {
 
     @Override
-    public boolean isValid(String args[], ConstraintValidatorContext constraintValidatorContext) {
+    public boolean isValid(String[] args, ConstraintValidatorContext constraintValidatorContext) {
         if (args == null || args.length == 0){
             return false;
         }

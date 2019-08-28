@@ -1,7 +1,7 @@
-package org.jonleb.characters.constraints.diccetower;
+package org.jonleb.dicetower.constraints.dicetower;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.characters.services.RollType;
+import org.jonleb.dicetower.services.RollType;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -12,10 +12,14 @@ import java.util.Arrays;
 @Log4j2
 @SupportedValidationTarget(ValidationTarget.PARAMETERS)
 public class RollValidator implements ConstraintValidator<RollConstraint, Object[]> {
+
     private RollType[] rollTypes;
 
     @Override
     public void initialize(RollConstraint constraintAnnotation) {
+        log.debug("#############################");
+        log.debug(constraintAnnotation.rollTypes()[0] + " " + constraintAnnotation.rollTypes()[1]);
+        log.debug("#############################");
         this.rollTypes = constraintAnnotation.rollTypes();
     }
 
@@ -23,14 +27,20 @@ public class RollValidator implements ConstraintValidator<RollConstraint, Object
     public boolean isValid(Object[] parameters, ConstraintValidatorContext constraintValidatorContext) {
         boolean valid = false;
         RollType rollType = (RollType) parameters[0];
-        RollType[] forSuccessList =  {RollType.SUCCESS, RollType.SUCCESS_BY_TYPE};
-        boolean isForSuccess = Arrays.asList(forSuccessList).contains(rollType);
-        if (isForSuccess && parameters.length == 3){
-            valid = true;
-        } else if (!isForSuccess && parameters.length == 2){
-            valid = true;
-        } else {
-            valid = false;
+        if (!Arrays.asList(this.rollTypes).contains(rollType)) return false;
+        switch (rollType){
+            case SUCCESS:
+            case SUCCESS_BY_TYPE:
+                if (parameters.length == 3){
+                    valid = true;
+                }
+                break;
+            case TOTAL:
+            case TOTAL_BY_TYPE:
+                if (parameters.length == 2){
+                    valid = true;
+                }
+                break;
         }
         return valid;
     }

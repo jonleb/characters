@@ -1,4 +1,4 @@
-package org.jonleb.characters.services;
+package org.jonleb.dicetower.services;
 
 public enum RollType {
     TOTAL,

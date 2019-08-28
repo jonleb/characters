@@ -1,4 +1,4 @@
-package org.jonleb.characters.config;
+package org.jonleb.dicetower.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,7 +17,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .anyRequest().permitAll()
         ;
-
 
     }
 }

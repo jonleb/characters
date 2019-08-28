@@ -1,10 +1,11 @@
-package org.jonleb.characters.constraints.dice;
+package org.jonleb.dicetower.constraints.dice;
 
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
+@SuppressWarnings("ALL")
 @Documented
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
