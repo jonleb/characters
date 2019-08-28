@@ -32,7 +32,8 @@ public class DiceController {
     )
     @ResponseBody
     public ResponseEntity<Map> roll(@RequestBody DiceTowerDescription diceTowerDescription){
-
+        if (log.isDebugEnabled())
+            log.debug(diceTowerDescription.toString());
         Map result = null;
 
         switch (diceTowerDescription.getRollType()){

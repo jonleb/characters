@@ -47,6 +47,23 @@ public class DiceControllerTest {
     }
 
     @Test
+    public void given_3D6_8D4_for_total() throws Exception {
+        log.debug("Start testing 'given_3D6_for_total'");
+        String s = mockMvc.perform(
+                get("/api/v1/dices/roll")
+                        .contentType("application/json")
+                        .content("{" +
+                                "\"rollType\": \"TOTAL_BY_TYPE\"," +
+                                "\"dicesToRoll\": \"3D6 8D4\"" +
+                                "}")
+        )
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+        log.debug(s);
+        log.debug("End testing 'given_3D6_for_total'");
+    }
+
+    @Test
     public void given_3D60_for_total_for_exception() throws Exception {
         log.debug("Start testing 'given_3D60_for_total'");
         String s = mockMvc.perform(
