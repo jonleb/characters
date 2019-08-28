@@ -79,4 +79,21 @@ public class DiceControllerTest {
         log.debug(s);
         log.debug("End testing 'given_3D60_for_total'");
     }
+
+    @Test
+    public void given_3D60_2D5_for_total_for_exception() throws Exception {
+        log.debug("Start testing 'given_3D60_2D5_for_total'");
+        String s = mockMvc.perform(
+                get("/api/v1/dices/roll")
+                        .contentType("application/json")
+                        .content("{" +
+                                "\"rollType\": \"TOTAL\"," +
+                                "\"dicesToRoll\": \"3D60 2D5\"" +
+                                "}")
+        )
+                .andExpect(status().isBadRequest())
+                .andReturn().getResponse().getContentAsString();
+        log.debug(s);
+        log.debug("End testing 'given_3D60_2D5_for_total'");
+    }
 }
