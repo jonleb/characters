@@ -1,2 +1,2 @@
-# characters
-RPG Characters creation for multiple RPG (en-fr)
+# Dice Tower
+Dice Tower for multiple game
