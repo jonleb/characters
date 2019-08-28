@@ -74,7 +74,7 @@ public class DiceControllerTest {
                                 "\"dicesToRoll\": \"3D60\"" +
                                 "}")
         )
-                .andExpect(status().isOk())
+                .andExpect(status().isBadRequest())
                 .andReturn().getResponse().getContentAsString();
         log.debug(s);
         log.debug("End testing 'given_3D60_for_total'");
