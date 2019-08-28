@@ -1,6 +1,6 @@
-package org.jonleb.characters.constraints.dicetower;
+package org.jonleb.dicetower.constraints.dicetower;
 
-import org.jonleb.characters.services.RollType;
+import org.jonleb.dicetower.services.RollType;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

@@ -1,4 +1,4 @@
-package org.jonleb.characters;
+package org.jonleb.dicetower;
 
 
 import lombok.extern.log4j.Log4j2;
@@ -11,9 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(
         scanBasePackages = {
-                "org.jonleb.characters.config",
-                "org.jonleb.characters.web.controller",
-                "org.jonleb.characters.services"
+                "org.jonleb.dicetower.config",
+                "org.jonleb.dicetower.web.controller",
+                "org.jonleb.dicetower.services"
         }
 )
 @Log4j2

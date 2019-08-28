@@ -1,7 +1,7 @@
-package org.jonleb.characters.web.controller;
+package org.jonleb.dicetower.web.controller;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.characters.services.DiceTower;
+import org.jonleb.dicetower.services.DiceTower;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

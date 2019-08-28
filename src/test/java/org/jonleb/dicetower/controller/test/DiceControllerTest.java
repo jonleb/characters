@@ -1,9 +1,9 @@
-package org.jonleb.characters.controller.test;
+package org.jonleb.dicetower.controller.test;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.characters.SpringBootCharacterApplication;
-import org.jonleb.characters.config.WebSecurityConfiguration;
-import org.jonleb.characters.web.controller.DiceController;
+import org.jonleb.dicetower.SpringBootCharacterApplication;
+import org.jonleb.dicetower.config.WebSecurityConfiguration;
+import org.jonleb.dicetower.web.controller.DiceController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

@@ -1,4 +1,4 @@
-package org.jonleb.characters.constraints.dice;
+package org.jonleb.dicetower.constraints.dice;
 
 
 import javax.validation.Constraint;

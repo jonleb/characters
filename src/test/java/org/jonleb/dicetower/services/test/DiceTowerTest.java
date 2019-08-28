@@ -1,9 +1,9 @@
-package org.jonleb.characters.services.test;
+package org.jonleb.dicetower.services.test;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.characters.SpringBootCharacterApplication;
-import org.jonleb.characters.services.DiceTower;
-import org.jonleb.characters.services.RollType;
+import org.jonleb.dicetower.SpringBootCharacterApplication;
+import org.jonleb.dicetower.services.DiceTower;
+import org.jonleb.dicetower.services.RollType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

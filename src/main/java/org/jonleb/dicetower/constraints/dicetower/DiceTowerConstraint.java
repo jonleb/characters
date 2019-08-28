@@ -1,4 +1,4 @@
-package org.jonleb.characters.constraints.dicetower;
+package org.jonleb.dicetower.constraints.dicetower;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

@@ -1,8 +1,8 @@
-package org.jonleb.characters.utils;
+package org.jonleb.dicetower.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.jonleb.characters.constraints.dice.DiceConstraint;
+import org.jonleb.dicetower.constraints.dice.DiceConstraint;
 
 import javax.validation.Valid;
 

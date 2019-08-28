@@ -1,9 +1,9 @@
-package org.jonleb.characters.web.controller;
+package org.jonleb.dicetower.web.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.jonleb.characters.services.RollType;
+import org.jonleb.dicetower.services.RollType;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
