@@ -140,5 +140,7 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
-/.idea/
 
+/.idea/
+.idea
+target/**

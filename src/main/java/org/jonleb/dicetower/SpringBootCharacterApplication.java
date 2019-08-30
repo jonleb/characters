@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(
         scanBasePackages = {
-                "org.jonleb.dicetower.config",
+                // "org.jonleb.dicetower.config",
                 "org.jonleb.dicetower.web.controller",
                 "org.jonleb.dicetower.services"
         }
