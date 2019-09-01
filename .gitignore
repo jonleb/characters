@@ -144,3 +144,4 @@ Desktop.ini
 /.idea/
 .idea
 target/**
+/scripts
