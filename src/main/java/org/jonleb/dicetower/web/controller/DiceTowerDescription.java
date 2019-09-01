@@ -19,12 +19,26 @@ public class DiceTowerDescription {
         this.dicesToRoll = dicesToRoll;
     }
 
+    /**
+     * Type of rolling dices
+     */
     @NotNull
     @NotBlank
     private RollType rollType;
 
+    /**
+     * Determine the minimal number to have a success
+     *
+     * Optional
+     */
     private int limitSuccess = -1;
 
+    /**
+     * Set of dices to roll.
+     * ex
+     * - "2D6"
+     * - "3D6 2D4"
+     */
     @NotBlank
     @NotNull
     private String dicesToRoll;
