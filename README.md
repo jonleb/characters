@@ -1,6 +1,16 @@
 # Dice Tower
 Dice Tower for multiple game
 
+## https
+* Following this guide: https://www.baeldung.com/spring-boot-https-self-signed-certificate  
+* PKCS
+** `keytool 
+   -genkeypair -alias jonleb.dicetower 
+   -keyalg RSA -keysize 2048 
+   -storetype PKCS12 -keystore jonleb.p12 
+   -validity 365`
+* Adding maven-resources-plugin in pom.xml
+
 ##  Docker
 * delete a docker image: `docker rm dicetower`
 * build a new image: `docker build . -t dicetower:v1`
@@ -22,7 +32,4 @@ Dice Tower for multiple game
 * built new image: `docker build -t jonleb/dicetower:0.3-SNAPSHOT .`
 * push docker image to EC2: docker push <USER_ACCOUNT>.dkr.ecr.us-east-1.amazonaws.com/dictower
 
-## https
-* Following this guide: https://www.baeldung.com/spring-boot-https-self-signed-certificate  
-* PKCS: keytool -genkeypair -alias jonleb -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore j    onleb
-*
+
