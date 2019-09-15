@@ -70,6 +70,7 @@ local.properties
 /log/
 */target/**
 /target
+target/
 
 ######################
 # Gradle
@@ -141,7 +142,11 @@ Desktop.ini
 ######################
 .eslintcache
 
-/.idea/
+######################
+# Idea
+######################
 .idea
-target/**
-/scripts
+.iws
+workspace.xml
+tasks.xml
+jonleb
