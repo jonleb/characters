@@ -27,9 +27,8 @@ Dice Tower for multiple game
 * Create a repository on EC2: https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html
 * Install awscli: `brew install awscli`
 * Run configuration: `aws configure`
-* get login info: `aws ecr get-login --region us-east-1`
+* get login info (N. Virginia): `aws ecr get-login --region us-east-1`
 * login with the result of the previous command
 * built new image: `docker build -t jonleb/dicetower:0.3-SNAPSHOT .`
 * push docker image to EC2: docker push <USER_ACCOUNT>.dkr.ecr.us-east-1.amazonaws.com/dictower
-
 
