@@ -1,5 +1,6 @@
 package org.jonleb.dicetower.web.controller;
 
+import io.micrometer.core.annotation.Timed;
 import lombok.extern.log4j.Log4j2;
 import org.jonleb.dicetower.services.DiceTower;
 import org.springframework.http.HttpStatus;
@@ -34,6 +35,7 @@ public class DiceController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @ResponseBody
+    @Timed
     public ResponseEntity<Map> roll(@RequestBody DiceTowerDescription diceTowerDescription){
         if (log.isDebugEnabled())
             log.debug(diceTowerDescription.toString());

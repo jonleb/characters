@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Created by jonathan on 30/10/17.
+ * @startuml
+ * [EC2]
+ * @enduml
  */
 
 @SpringBootApplication(

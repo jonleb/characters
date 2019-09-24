@@ -23,7 +23,7 @@ Dice Tower for multiple game
 * login to docker: `docker login`
 * push docker image to repository: `docker push jonleb/dicetower:tag` exe:i `docker push jonleb/dicetower:0.3-SNAPSHOT`
 
-## EC2
+## Amazon Elastic Constainer Service (ECS)
 * Create a repository on EC2: https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html
 * Install awscli: `brew install awscli`
 * Run configuration: `aws configure`
