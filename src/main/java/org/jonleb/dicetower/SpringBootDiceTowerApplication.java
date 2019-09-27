@@ -17,8 +17,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         }
 )
 @Log4j2
-public class SpringBootCharacterApplication {
+public class SpringBootDiceTowerApplication {
     public static void main(String[] args){
-        SpringApplication.run(SpringBootCharacterApplication.class, args);
+        SpringApplication.run(SpringBootDiceTowerApplication.class, args);
     }
 }

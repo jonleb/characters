@@ -1,7 +1,7 @@
 package org.jonleb.dicetower.services.test;
 
 import lombok.extern.log4j.Log4j2;
-import org.jonleb.dicetower.SpringBootCharacterApplication;
+import org.jonleb.dicetower.SpringBootDiceTowerApplication;
 import org.jonleb.dicetower.services.DiceTower;
 import org.jonleb.dicetower.services.RollType;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-@SpringBootTest(classes = {SpringBootCharacterApplication.class})
+@SpringBootTest(classes = {SpringBootDiceTowerApplication.class})
 @Log4j2
 @Validated
 class DiceTowerTest {
