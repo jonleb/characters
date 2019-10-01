@@ -17,9 +17,6 @@ public class RollValidator implements ConstraintValidator<RollConstraint, Object
 
     @Override
     public void initialize(RollConstraint constraintAnnotation) {
-        log.debug("#############################");
-        log.debug(constraintAnnotation.rollTypes()[0] + " " + constraintAnnotation.rollTypes()[1]);
-        log.debug("#############################");
         this.rollTypes = constraintAnnotation.rollTypes();
     }
 

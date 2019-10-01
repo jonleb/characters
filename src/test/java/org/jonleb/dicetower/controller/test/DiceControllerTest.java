@@ -2,7 +2,6 @@ package org.jonleb.dicetower.controller.test;
 
 import lombok.extern.log4j.Log4j2;
 import org.jonleb.dicetower.SpringBootDiceTowerApplication;
-import org.jonleb.dicetower.config.WebSecurityConfiguration;
 import org.jonleb.dicetower.web.controller.DiceController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SuppressWarnings("WeakerAccess")
 @SpringBootTest(classes = {
         SpringBootDiceTowerApplication.class,
-        WebSecurityConfiguration.class,
         DiceController.class
 })
 @AutoConfigureMockMvc
